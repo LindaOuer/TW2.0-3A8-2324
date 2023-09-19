@@ -1,0 +1,12 @@
+{{ nomService }}
+-
+{{ desc }}
+
+<a href="{{ 
+    path('app_service', {nom: nomService}) 
+}}"> Vers index </a>
+
+{% for s in services %}
+{{ s.name }} - {{ s.description }} <br>
+
+{% endfor %}
