@@ -2,11 +2,19 @@
 -
 {{ desc }}
 
-<a href="{{ 
-    path('app_service', {nom: nomService}) 
-}}"> Vers index </a>
+<a href="{{
+    path('app_service', {nom: nomService})
+}}">
+  Vers index
+</a>
+
+<p>le nombre de services disponibles
+  {{ services|length }}.</p>
 
 {% for s in services %}
-{{ s.name }} - {{ s.description }} <br>
+  {{ s.name }}
+  -
+  {{ s.description }}
+  <br>
 
 {% endfor %}

@@ -1,0 +1,7 @@
+{% for a in list %}
+    {{a.username}} - {{ a.email }} <br>
+    <a href="{{ path('author_edit', {id: a.id}) }}"> Edit </a>
+    <br>
+    <a href="{{ path('author_delete', {id: a.id}) }}"> Delete </a>
+        <br>
+{% endfor %}

@@ -1,0 +1,20 @@
+<h1>
+  Title
+</h1>
+
+<a href="{{ path('app_project', {nom: n }) }}"> Vers Index </a>
+
+{{ n }} - {{ desc }}
+<br>
+
+
+
+<table border=1>
+{% for p in projects %}
+<tr>
+<td>{{ p.name }} </td>
+  <td> {{ p.description}}</td>
+  <td> détails </td>
+</tr>
+{% endfor %}
+</table>
